@@ -1,4 +1,4 @@
-public class 배열 {
+public class _0304Array {
     public static void main(String[] args){
         //배열의 기본선업법
         int[] intArray1 = {1,2,3,4,5};

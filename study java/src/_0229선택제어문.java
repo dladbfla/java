@@ -1,4 +1,4 @@
-public class Main {
+public class _0229선택제어문 {
     public static void main(String[] args) {
         //if 단독사용
         boolean x = true;

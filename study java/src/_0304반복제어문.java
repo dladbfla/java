@@ -1,4 +1,4 @@
-public class java20240304 {
+public class _0304반복제어문 {
     public static void main(String[] args){
         // for반복문의 기본형 //for(초기식 ; 조건식 ; 증감식){}
         for (int i = 0; i < 10; i = i + 1){
