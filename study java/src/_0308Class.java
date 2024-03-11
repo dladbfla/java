@@ -1,7 +1,8 @@
 public class _0308Class {
     public static void main(String[] args){
+        //생성자의 오버로딩
         Students tom = new Students("Tom", 18, "Daejeon", "1234" );
-        Students steve = new Students("Steve", 25, "Seoul", "4321");
+        Students steve = new Students("Steve", 25, "Seoul");
         Students paul = new Students();
         /*paul.name = "Paul";
         paul.age = 22;

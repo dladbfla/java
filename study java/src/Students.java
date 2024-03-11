@@ -13,6 +13,11 @@ public class Students {
         this.address = address;
         this.personalNum = personalNum;
     }
+    public Students(String name, int age, String address) { //생성자
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
 
     public String getName() {
         return name;
