@@ -55,6 +55,7 @@ public class _0307문제 {
             strList2[i] = strList1[index];
             index = index - 1;
         }
+
         //System.out.println(Arrays.toString(strList2));
         for (int i = 0; i < strList2.length; i++){
             System.out.print(strList2[i]);
