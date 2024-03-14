@@ -1,4 +1,4 @@
-package _0313상속.p325;
+package _0313.p325;
 
 class A{
     int m = 3;

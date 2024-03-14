@@ -1,4 +1,4 @@
-package _0313상속.p327;
+package _0313.p327;
 
 //캐스팅의 가능 여부를 확인 할 수 있는 instanceof
 

@@ -1,4 +1,4 @@
-package _0313상속.p313;
+package _0313.p313;
 
 class Human{
     String name;
