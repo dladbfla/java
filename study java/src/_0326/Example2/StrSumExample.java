@@ -10,7 +10,7 @@ public class StrSumExample {
         int sum = 0;
         char[] str1 = str.toCharArray();
         for (int i = 0; i<str1.length; i++){
-            sum = sum + str1[i] -48;
+            sum = sum + str1[i] - '0';
         }
         System.out.println("합계는 " + sum); // 15
     }
