@@ -25,9 +25,24 @@ public class Q4 {
         int input = 0; // 사용자입력을 저장할 공간
         int count = 0; // 시도횟수를 세기위한 변수
 
+        System.out.println("1~100까지 입력하세요");
         Scanner sc = new Scanner(System.in);
         do {
             // 여기 코드를 작성
+            int in = sc.nextInt();
+            input = in;
+            if (answer>input){
+                System.out.println("더 큰 수를 입력하세요");
+                count = count+1;
+            } else if (answer<input) {
+                System.out.println("더 작은 수를 입력하세요");
+                count = count+1;
+            }
+            else{
+                System.out.println("맞췄습니다.");
+                System.out.println("시도횟수는 "+count+"번입니다");
+                break;
+            }
         } while(true); // 무한반복문
     }
 }
