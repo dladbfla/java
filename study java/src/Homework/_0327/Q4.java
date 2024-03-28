@@ -40,6 +40,7 @@ public class Q4 {
             }
             else{
                 System.out.println("맞췄습니다.");
+                count = count+1;
                 System.out.println("시도횟수는 "+count+"번입니다");
                 break;
             }
