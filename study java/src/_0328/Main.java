@@ -8,53 +8,15 @@ public class Main {
     static ArrayList<User> users;
     static ArrayList<Lecture> lectures;
     static ArrayList<LectureRegistration> lectureRegistrations;
+    static ArrayList<Review> reviews;
 
     public static void main(String[] args){
-        ArrayList<User> users = new ArrayList<>();
-        User user1 = new User("steve", "abc1", "123!",
-                LocalDate.of(1999,1,2), "ABC.gmail.com");
-        users.add(user1);
-        User user2 = new User("Tom", "bcd2", "234!",
-                LocalDate.of(2002,2,5), "BCD.naver.com");
-        users.add(user2);
-        User user3 = new User("Paul", "cde3", "345!",
-                LocalDate.of(1997,6,21), "CDE.gmail.com");
-        users.add(user3);
-        User user4 = new User("susie", "def4", "456!",
-                LocalDate.of(2003,12,12), "DEF.daum.net");
-        users.add(user4);
-        User user5 = new User("alex", "efg5", "567!",
-                LocalDate.of(1989,10,30), "EFG.naver.com");
-        users.add(user5);
-
-        ArrayList<Lecture> lectures = new ArrayList<>();
-        Lecture lecture1 = new Lecture(1, "Java", 100
-                , "Programming", "beginner");
-        lectures.add(lecture1);
-        Lecture lecture2 = new Lecture(2, "Spring", 150
-                , "Programming", "intermediate");
-        lectures.add(lecture2);
-        Lecture lecture3 = new Lecture(3, "Javascript", 80
-                , "Programming", "beginner");
-        lectures.add(lecture3);
-
-        ArrayList<LectureRegistration> lectureRegistrations = new ArrayList<>();
-        LectureRegistration lectureRegistration1 = new LectureRegistration("abc1",1);
-        lectureRegistrations.add(lectureRegistration1);
-        LectureRegistration lectureRegistration2 = new LectureRegistration("bcd2",2);
-        lectureRegistrations.add(lectureRegistration2);
-        LectureRegistration lectureRegistration3 = new LectureRegistration("bcd2",3);
-        lectureRegistrations.add(lectureRegistration3);
-        LectureRegistration lectureRegistration4 = new LectureRegistration("cde3",1);
-        lectureRegistrations.add(lectureRegistration4);
-        LectureRegistration lectureRegistration5 = new LectureRegistration("def4",2);
-        lectureRegistrations.add(lectureRegistration5);
-        LectureRegistration lectureRegistration6 = new LectureRegistration("dfg5",3);
-        lectureRegistrations.add(lectureRegistration6);
+        //정보초기화
+        InfoCreate.createInfos(lectureRegistrations);
 
 
         //2. 강의 1번 수강생의 loginId 찾기
-        lectureLoginId();
+        lectureLoginId(2);
 
 
         //3. 유저의 loginId로 강의명 찾기
@@ -71,10 +33,11 @@ public class Main {
 
         titleEmail(lec);
 
+
     }
-    public static void lectureLoginId(){
+    public static void lectureLoginId(int lectureId){
         for (int i = 0; i < lectureRegistrations.size(); i++){
-            if (lectureRegistrations.get(i).getLectureId() ==1){
+            if (lectureRegistrations.get(i).getLectureId() == lectureId){
                 System.out.println(lectureRegistrations.get(i).getUserId());
             }
         }
@@ -106,6 +69,19 @@ public class Main {
                 }
             }
         }
+    }
+
+    // 리뷰를 생성하는 메서드 만들기 public boolean createReview(유저아이디, 강의아이디, 레이팅, 텍스트){
+    // 내부 기능 : 점수는 1~10점 사이, 점수는 필수 / 한명의 유저가 하나의 강의에 한번 리뷰를 남길 수 있음/ 수강하지 않은 강의에는 리뷰를 남길 수 없음
+    // 기능에 에러가 나는 경우에는 메서드가 false 객체가 정상적으로 생성되는 경우에만 true ==> 생성객체는 ArrayList로 관리
+    // ex) createReviw("hero11", 1, 10, "좋은 강의였어요") //객체 생성하고 true 리턴
+    // ex) createReviw("hero11", 1, 100, "좋은 강의였어요") //정수에러이므로 false 리턴
+    // ex) createReviw("tommy", 3, 5, "좋은 강의였어요") //tommy는 3번 강의를 수강하지 않으므로 false 리턴
+    public boolean createReviw(String loginId, String lectureId, int rating){
+        if (rating >= 1 && rating <=10){
+            return true;
+        }
+        return  false;
     }
 
 }
