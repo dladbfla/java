@@ -1,4 +1,4 @@
-package _0325;
+package _3._0325;
 
 public class JavaChild extends JavaAbstract{
 

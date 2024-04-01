@@ -1,4 +1,4 @@
-package _0328;
+package _3._0328;
 
 public enum Defficulty {
     BEGINNER,

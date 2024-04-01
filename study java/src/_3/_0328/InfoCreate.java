@@ -1,11 +1,10 @@
-package _0328;
+package _3._0328;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Dictionary;
 
 public class InfoCreate {
-    public static void createInfos(ArrayList<LectureRegistration> lectureRegistrations){  //매개변수에 입력해서 가져올 수도 있고
+    public static void createInfos(){  //매개변수에 입력해서 가져올 수도 있고
         Main.users = new ArrayList<>();                                                   //배열명 앞에 Main을 붙여줘도 됨
         User user1 = new User("steve", "abc1", "123!",
                 LocalDate.of(1999,1,2), "ABC.gmail.com");
@@ -34,22 +33,20 @@ public class InfoCreate {
                 , Category.PROGRAMING, Defficulty.INTERMEDIATE);
         Main.lectures.add(lecture3);
 
-        lectureRegistrations = new ArrayList<>();  //선언은 위에서 했고 대입만 함 // 같이 하려면 ArrayList<LectureRegistration> lectureRegistrations = new ArrayList<>();
+        Main.lectureRegistrations = new ArrayList<>();  //선언은 위에서 했고 대입만 함 // 같이 하려면 ArrayList<LectureRegistration> lectureRegistrations = new ArrayList<>();
         LectureRegistration lectureRegistration1 = new LectureRegistration("abc1",1);
-        lectureRegistrations.add(lectureRegistration1);
+        Main.lectureRegistrations.add(lectureRegistration1);
         LectureRegistration lectureRegistration2 = new LectureRegistration("bcd2",2);
-        lectureRegistrations.add(lectureRegistration2);
+        Main.lectureRegistrations.add(lectureRegistration2);
         LectureRegistration lectureRegistration3 = new LectureRegistration("bcd2",3);
-        lectureRegistrations.add(lectureRegistration3);
+        Main.lectureRegistrations.add(lectureRegistration3);
         LectureRegistration lectureRegistration4 = new LectureRegistration("cde3",1);
-        lectureRegistrations.add(lectureRegistration4);
+        Main.lectureRegistrations.add(lectureRegistration4);
         LectureRegistration lectureRegistration5 = new LectureRegistration("def4",2);
-        lectureRegistrations.add(lectureRegistration5);
+        Main.lectureRegistrations.add(lectureRegistration5);
         LectureRegistration lectureRegistration6 = new LectureRegistration("dfg5",3);
-        lectureRegistrations.add(lectureRegistration6);
+        Main.lectureRegistrations.add(lectureRegistration6);
 
-        Main.reviews = new ArrayList<>();
-        Review review1 = new Review(1, 1, "abc1", 5, "ㅋㅋ");
-        Main.reviews.add(new Review(2,2,"bcd", 10,"good"));
+
     }
 }

@@ -1,4 +1,4 @@
-package _0328;
+package _3._0328;
 
 public class Review {
     int reviewId;
@@ -60,6 +60,8 @@ public class Review {
         this.lectureId = lectureId;
     }
 
-    
+    public String toString(){
+        return reviewId+", "+lectureId + ", "+loginId+", "+rating+", "+text;
+    }
 
 }

@@ -1,4 +1,4 @@
-package _0325;
+package _3._0325;
 
 abstract public class JavaAbstract {
     //필드

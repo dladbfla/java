@@ -1,6 +1,4 @@
-package _0328;
-
-import java.util.ArrayList;
+package _3._0328;
 
 public class Lecture {
     int lectureId;

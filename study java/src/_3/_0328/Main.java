@@ -1,6 +1,5 @@
-package _0328;
+package _3._0328;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,7 +11,8 @@ public class Main {
 
     public static void main(String[] args){
         //정보초기화
-        InfoCreate.createInfos(lectureRegistrations);
+        InfoCreate.createInfos();
+        reviews = new ArrayList<>();
 
 
         //2. 강의 1번 수강생의 loginId 찾기
@@ -33,6 +33,10 @@ public class Main {
 
         titleEmail(lec);
 
+        //review
+        boolean canAddReview = false;
+        canAddReview = createReview("abc1", 1, 10, "gg");
+        createReview("bcd2",2, 3, "ㅋㅋ");  //String loginId, int lectureId, int rating, String text
 
     }
     public static void lectureLoginId(int lectureId){
@@ -77,11 +81,38 @@ public class Main {
     // ex) createReviw("hero11", 1, 10, "좋은 강의였어요") //객체 생성하고 true 리턴
     // ex) createReviw("hero11", 1, 100, "좋은 강의였어요") //정수에러이므로 false 리턴
     // ex) createReviw("tommy", 3, 5, "좋은 강의였어요") //tommy는 3번 강의를 수강하지 않으므로 false 리턴
-    public boolean createReviw(String loginId, String lectureId, int rating){
-        if (rating >= 1 && rating <=10){
-            return true;
+    public static boolean createReview(String loginId, int lectureId, int rating, String text){
+        if (rating < 1 || rating > 10){
+            return false;
         }
-        return  false;
+        for (Review review : reviews){  //배열에서만 쓸 수 있음 //i=0일 때 Review review = reviews[0] => 1씩 증가
+            if (review.getLoginId().equals(loginId) && review.lectureId == lectureId){ //string은 equals 씀
+                return false;
+            }
+        }
+        boolean canReview = false;
+        for (int j = 0; j<lectureRegistrations.size(); j++){
+            if (lectureRegistrations.get(j).getUserId().equals(loginId) && lectureRegistrations.get(j).lectureId == lectureId){
+                canReview = true;
+            }
+        }
+        if (!canReview){
+            return false;
+        }
+        reviews.add(new Review(reviews.size()+1, lectureId, loginId, rating, text));
+        System.out.println(reviews.get(reviews.size()-1).toString());
+
+        return true;
     }
 
 }
+
+
+
+
+
+
+
+
+
+
