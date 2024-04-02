@@ -1,4 +1,4 @@
-package _0308;
+package _3._0308;
 
 public class Students {
     private String name; //필드

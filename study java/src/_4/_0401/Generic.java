@@ -1,4 +1,4 @@
-package _0401;
+package _4._0401;
 
 class MyClass<T>{
     private T t;

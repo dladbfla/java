@@ -1,4 +1,4 @@
-package _0401;
+package _4._0401;
 
 class A{}
 class B extends A{}

@@ -8,6 +8,10 @@ public class Main {
     static ArrayList<Lecture> lectures;
     static ArrayList<LectureRegistration> lectureRegistrations;
     static ArrayList<Review> reviews;
+    static ArrayList<Teacher> teachers;
+    static ArrayList<LectureTeacher> lectureTeachers;
+    static ArrayList<FreeBoard> freeBoards;
+
 
     public static void main(String[] args){
         //정보초기화
@@ -38,7 +42,18 @@ public class Main {
         canAddReview = createReview("abc1", 1, 10, "gg");
         createReview("bcd2",2, 3, "ㅋㅋ");  //String loginId, int lectureId, int rating, String text
 
+        //특정 과목Id로 해당 과목을 가르치는 teacher의 이름 출력
+        getTeacherByLectureId(1);
+
+        //특정 teacher가 가르치는 과목명 리스트 출력
+        getLectureTitleListByTeacherId("bbb2");
+
+
+
     }
+
+    //메서드
+
     public static void lectureLoginId(int lectureId){
         for (int i = 0; i < lectureRegistrations.size(); i++){
             if (lectureRegistrations.get(i).getLectureId() == lectureId){
@@ -103,6 +118,38 @@ public class Main {
         System.out.println(reviews.get(reviews.size()-1).toString());
 
         return true;
+    }
+
+    //3. 관련 메서드 만들기(teacher)
+    //getTeacherByLectureId: 특정 과목Id로 해당 과목을 가르치는 teacher의 이름 출력
+    //getLectureTitleListByTeacherId: 특정 teacher가 가르치는 과목명 리스트 출력
+    //(반드시 String[]또는 List<String>에 담아서 리턴
+
+    public static void getTeacherByLectureId(int lectureId){
+        for (LectureTeacher lectureTeacher : lectureTeachers){
+            if (lectureTeacher.getLectureId() == lectureId){
+                for (Teacher teacher : teachers){
+                    if(lectureTeacher.getTeacherId() == teacher.teacherLoginId){
+                        System.out.println(teacher.teacherName);
+                    }
+                }
+
+            }
+        }
+    }
+
+    public static void getLectureTitleListByTeacherId(String teacherId){
+        ArrayList<String> lectureTitle = new ArrayList<>();
+        for (LectureTeacher lectureTeacher : lectureTeachers){
+            if (lectureTeacher.teacherId == teacherId){
+                for (Lecture lecture : lectures){
+                    if (lecture.lectureId ==lectureTeacher.lectureId){
+                        lectureTitle.add(lecture.title);
+                    }
+                }
+            }
+        }
+        System.out.println(lectureTitle);
     }
 
 }

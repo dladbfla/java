@@ -1,4 +1,4 @@
-package _0401;
+package _4._0401;
 
 class GenericMethods{ //일반클래스 안에 정의한 제네릭메서드 예제
     public int method0(int a){ //일반메서드  //타입이 고정

@@ -1,4 +1,4 @@
-package _0401;
+package _4._0401;
 
 class AA {
     public <T extends Number> void methods1(T t){ //제네릭메서드 범위 제한

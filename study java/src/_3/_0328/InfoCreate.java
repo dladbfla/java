@@ -47,6 +47,16 @@ public class InfoCreate {
         LectureRegistration lectureRegistration6 = new LectureRegistration("dfg5",3);
         Main.lectureRegistrations.add(lectureRegistration6);
 
+        Main.teachers = new ArrayList<>();
+        Main.teachers.add(new Teacher("Kimdh", "aaa1", "1111"));
+        Main.teachers.add(new Teacher("Seohw","bbb2","2222"));
 
+        Main.lectureTeachers = new ArrayList<>();
+        Main.lectureTeachers.add(new LectureTeacher("aaa1", 1));
+        Main.lectureTeachers.add(new LectureTeacher("bbb2",2));
+        Main.lectureTeachers.add(new LectureTeacher("bbb2",3));
+
+        Main.freeBoards = new ArrayList<>();
+        Main.freeBoards.add(new FreeBoard(1, "게시글 이름", "게시글 내용", "abc1"));
     }
 }
