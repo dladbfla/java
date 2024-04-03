@@ -1,4 +1,4 @@
-package _0305;
+package _3._0305;
 
 public class _0305제어키워드 {
     public static void main(String[] args){

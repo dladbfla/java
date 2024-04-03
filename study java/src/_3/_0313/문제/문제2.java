@@ -1,4 +1,4 @@
-package _0313.문제;
+package _3._0313.문제;
 
 import java.util.Arrays;
 

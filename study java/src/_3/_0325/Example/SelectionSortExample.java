@@ -1,4 +1,4 @@
-package _0325.Example;
+package _3._0325.Example;
 
 public class SelectionSortExample {
     public static void selectionSort(int[] arr){

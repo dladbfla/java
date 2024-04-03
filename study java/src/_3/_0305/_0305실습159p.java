@@ -1,4 +1,4 @@
-package _0305;
+package _3._0305;
 
 public class _0305실습159p {
     public static void main(String[] srgs){

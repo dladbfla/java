@@ -1,4 +1,4 @@
-package _0327.Example;
+package _3._0327.Example;
 
 public class LinearSearchExample {
     public static int linearSearch(int[] arr, int key){

@@ -1,4 +1,4 @@
-package _0304;
+package _3._0304;
 
 public class _0304Array {
     public static void main(String[] args){

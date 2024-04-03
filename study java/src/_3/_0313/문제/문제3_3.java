@@ -1,4 +1,4 @@
-package _0313.문제;
+package _3._0313.문제;
 
 public class 문제3_3 { //3_1에서 왼쪽으로 값 이동 -> 오른쪽으로
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package _0326.Example2;
+package _3._0326.Example2;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

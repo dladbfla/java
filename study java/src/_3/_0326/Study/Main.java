@@ -1,4 +1,4 @@
-package _0326.Study;
+package _3._0326.Study;
 
 public class Main {
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-package _0315.example;
+package _3._0315.example;
 
 public class 문제2 { //오름차순 정렬
     static void bubble(int[] arr) {

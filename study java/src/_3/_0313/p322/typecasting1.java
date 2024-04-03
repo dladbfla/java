@@ -1,4 +1,4 @@
-package _0313.p322;
+package _3._0313.p322;
 
 //클래스의 상속 관계
 class A{}

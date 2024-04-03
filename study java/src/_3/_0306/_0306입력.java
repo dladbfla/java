@@ -1,4 +1,4 @@
-package _0306;
+package _3._0306;
 
 import java.util.Scanner;
 

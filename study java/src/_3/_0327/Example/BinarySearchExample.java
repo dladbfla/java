@@ -1,4 +1,4 @@
-package _0327.Example;
+package _3._0327.Example;
 
 public class BinarySearchExample {
     public static void binarySearch(int arr[], int first, int last, int key){

@@ -1,4 +1,4 @@
-package _0326.Study;
+package _3._0326.Study;
 
 public interface A {
     //인터페이스는 추상메서드(미완성메서드)로 이루어져 있음
@@ -6,4 +6,5 @@ public interface A {
     public abstract void abc();
 
     public static final int a= 3;
+
 }

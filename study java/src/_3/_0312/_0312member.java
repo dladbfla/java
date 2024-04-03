@@ -1,4 +1,4 @@
-package _0312;
+package _3._0312;
 
 public class _0312member {
     static int name; // 정적 필드

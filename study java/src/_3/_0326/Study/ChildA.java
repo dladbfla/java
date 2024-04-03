@@ -1,4 +1,4 @@
-package _0326.Study;
+package _3._0326.Study;
 
 public class ChildA implements A,B{
 
@@ -13,3 +13,4 @@ public class ChildA implements A,B{
         System.out.println("Child of B");
     }
 }
+

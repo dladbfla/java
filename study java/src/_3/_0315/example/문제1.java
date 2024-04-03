@@ -1,4 +1,4 @@
-package _0315.example;
+package _3._0315.example;
 
 public class 문제1 {
     public static void main(String[] args){

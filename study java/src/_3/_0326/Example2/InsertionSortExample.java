@@ -1,4 +1,4 @@
-package _0326.Example2;
+package _3._0326.Example2;
 
 public class InsertionSortExample {
     // Insertion 정렬의 알고리즘을 이해하고
