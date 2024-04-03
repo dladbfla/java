@@ -48,7 +48,19 @@ public class Main {
         //특정 teacher가 가르치는 과목명 리스트 출력
         getLectureTitleListByTeacherId("bbb2");
 
+        freeBoards = new ArrayList<>();
+        //자유게시판
+        FreeBoard freeBoard = new FreeBoard();
+        freeBoard.createFreeBoard("게시글1", "11111", "abc1");
+        freeBoard.createFreeBoard("게시글2", "22222", "bcd2");
+        //자유게시판 댓글
+        Reply reply = new Reply();
+        reply.createReply("댓글1", "cde3", 0);
+        reply.createReply("댓글2", "def4", 1);
+        reply.createReply("댓글3", "efg5", 1);
 
+        System.out.println(freeBoards.toString());
+        System.out.println();
 
     }
 

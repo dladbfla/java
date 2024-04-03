@@ -10,7 +10,7 @@ package _3._0328;
 //    : 위에서 찾은 FreeBoard 객체내에 setReplise 메서드를 이용하여 Reply 객체를 FreeBoard 객체의 replies에 추가한다
 //      => 이때 setReplies 메서드의 내용을 변경할 필요가 있을 수 있음!
 
-public class Reply {
+public class Reply extends FreeBoard{
     int replyId;
     String replyContent;
     String replyLoginId;
@@ -60,5 +60,14 @@ public class Reply {
 
     public String toString(){
         return replyId+", "+replyContent+", "+replyLoginId+", "+freeBoardId;
+    }
+
+    public void createReply(String replyContent, String replyLoginId, int freeBoardId){
+        for (int i = 0; i<Main.freeBoards.size(); i++){
+            if (Main.freeBoards.get(i).freeBoardId == freeBoardId){
+                Main.freeBoards.get(i).replies.add(new Reply(replies.size(), replyContent, replyLoginId, freeBoardId));
+                break;
+            }
+        }
     }
 }

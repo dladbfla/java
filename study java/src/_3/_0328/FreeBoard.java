@@ -77,4 +77,8 @@ public class FreeBoard {
     public String toString(){
         return freeBoardId+", "+freeBoardTitle+", "+freeBoardContent+", "+freeBoardId+", "+replies;
     }
+
+    public void createFreeBoard(String title, String content, String loginId){
+        Main.freeBoards.add(new FreeBoard(Main.freeBoards.size(), title, content, loginId));
+    }
 }

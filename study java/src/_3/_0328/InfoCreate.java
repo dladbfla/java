@@ -56,7 +56,5 @@ public class InfoCreate {
         Main.lectureTeachers.add(new LectureTeacher("bbb2",2));
         Main.lectureTeachers.add(new LectureTeacher("bbb2",3));
 
-        Main.freeBoards = new ArrayList<>();
-        Main.freeBoards.add(new FreeBoard(1, "게시글 이름", "게시글 내용", "abc1"));
     }
 }
