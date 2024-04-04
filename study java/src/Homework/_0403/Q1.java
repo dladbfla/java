@@ -11,6 +11,18 @@ public class Q1 {
 
     public static String changeCase(String str) {
         // 여기 코드 작성 !!
-        return "";
+        char[] ca = str.toCharArray();
+        for (int i = 0; i<str.length(); i++){
+            if (ca[i] >= 'A' && ca[i] <= 'Z' ){
+                ca[i] = (char) (ca[i] - 'A' + 'a');
+            }else if(ca[i] >= 'a' && ca[i] <= 'z'){
+                ca[i] = (char) (ca[i] - 'a' + 'A');
+            }else{
+                ca[i] = ca[i];
+            }
+        }
+        String str1 = String.valueOf(ca);
+
+        return str1;
     }
 }
