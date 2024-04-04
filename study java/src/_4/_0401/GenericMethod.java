@@ -20,7 +20,7 @@ class GenericMethods{ //일반클래스 안에 정의한 제네릭메서드 예�
     //제네릭메서드 내부에서 사용할 수 있는 메서드
     //반드시 제네릭메서드 T의 위치에 올 수 있는 모든 클래스들이 사용 가능한 메서드만 쓸 수 있음
     public <T> void method5(T t){
-        //System.out.println(t.length()); //현재는 string일 때만 쓸 수 있기 때문에 오류
+        //System.out.println(t.length()); //이 코드는 현재 string일 때만 쓸 수 있기 때문에 오류
         System.out.println(t.equals("안녕")); //모든 클래스의 부모인 object의 메서드는 가능
     }
 
