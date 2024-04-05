@@ -29,6 +29,5 @@ public class Q2 {
             result = (double) ((9*temp)/5)+32;
             System.out.println("섭씨 "+temp+"도는 화씨 "+result+"도");
         }
-        System.out.println(result);
     }
 }
